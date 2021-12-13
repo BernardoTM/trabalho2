@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Preencha a triagem abaixo</mat-card-title>
+</mat-card>
+<form>
+    <mat-form-field>
+        <input matInput required placeholder="Queixa Principal"
+        [(ngModel)] ="anamnese.queixaPrincipal" name="queixaPrincipal">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Histórico de doença atual"
+        [(ngModel)] ="anamnese.historicoDoencaAtual" name="historicoDoencaAtual">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Alergias"
+        [(ngModel)] ="anamnese.alergia" name="alergia">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Histórico Familiar"
+        [(ngModel)] ="anamnese.historicoFamiliar" name="historicoFamiliar">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Hábitos de vida"
+        [(ngModel)] ="anamnese.habitosVida" name="habitosVida">
+    </mat-form-field>
+</form>
+
+<button mat-raised-button (click)=cadastralista() color="primary">
+    Salvar 
+</button>
+
+<button mat-raised-button (click)=cancel()>
+    Cancela 
+</button>

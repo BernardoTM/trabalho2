@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title>Novo Medico</mat-card-title>
+</mat-card>
+<form>
+    <mat-form-field>
+        <input matInput required placeholder="Nome"
+        [(ngModel)] ="medico.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput required placeholder="CPF"
+        [(ngModel)] ="medico.cpf" name="cpf">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput required placeholder="CRM"
+        [(ngModel)] ="medico.crm" name="crm">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput required placeholder="E-mail"
+        [(ngModel)] ="medico.email" name="email">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Especialidade</mat-label>
+        <select matNativeControl required name="especialidade" [(ngModel)] ="medico.especialidade">
+            <option value="CARD">Cardiologista</option>
+            <option value="GERAL">Clinico Geral</option>
+            <option value="ENDO">Endocrinologista</option>
+            <option value="NEURO">Neurologista</option>
+          </select> 
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput required placeholder="Duração da consulta"
+        [(ngModel)] ="medico.duracao" name="duracao">
+    </mat-form-field>
+</form>
+
+<button mat-raised-button (click)=cadastra() color="primary">
+    Salvar 
+</button>
+
+<button mat-raised-button (click)=cancel() >
+    Cancela 
+</button>
